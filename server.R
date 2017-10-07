@@ -1,6 +1,6 @@
 # server.R file for the shiny app
-# This app was developed This application predicts the weight of a car (in lbs) given the fuel efficiency in miles per gallon for the car
-# using mtcars dataset, from [R]
+# This app was developed to predict the weight of a car (in 1000 lbs) given the fuel efficiency in miles per gallon for the car
+# using mtcars dataset from [R]
 
 library(shiny)
 shinyServer(function(input, output) {
