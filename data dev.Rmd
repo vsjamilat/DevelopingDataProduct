@@ -1,0 +1,46 @@
+---
+title: "Peer-graded Assignment: Course Project: Shiny Application and Reproducible Pitch"
+author: "Veron SJ"
+date: "7th October 2017"
+output: ioslides_presentation
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, cache = TRUE, echo = FALSE, 
+                      message = FALSE, warning = FALSE)
+```
+
+## Introduction
+
+- This project was created as part of the Developing Data Products course of the Coursera [Data Science Specialisation](https://www.coursera.org/specializations/jhu-data-science).
+
+- The app developed for the first part of the assignment demo is avalilable at: https://veronsj.shinyapps.io/datadev/
+
+- Source code for ui.R and server.R files are available on the GitHub repo: https://github.com/vsjamilat/DevelopingDataProduct
+
+
+##  Web Application functionality
+
+The site allows users to predict the weight of a car (in 1000 lbs) given the fuel efficiency in miles per gallon (MPG).
+
+User may choose a certain of MPG using the slider bar to get the predicted weight of a car.
+
+Predictions are made using linear regression model. Model 1 is using MPG as the input whereas Model 2 with additional extra sline term as the input.
+
+##  Summary of dataset used
+Predictions are using the mtcars dataset from [R].
+
+```{r, echo=FALSE}
+summary(mtcars)
+
+```
+
+## The relationship between miles per gallon (mpg) and weight in 1000 lbs (wt) in the mtcars dataset.
+
+
+```{r, echo=FALSE}
+
+library(car)
+scatterplot.matrix(~mpg+wt, data=mtcars, cex.axis=1.5)
+```
+
